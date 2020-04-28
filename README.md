@@ -1,4 +1,6 @@
 # InnocvRllApp
+Little C.R.U.D. app on Angular for INNOCV recruit proccess. (First Angular experience)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
 

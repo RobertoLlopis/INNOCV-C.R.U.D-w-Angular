@@ -10,7 +10,6 @@ const routes: Routes = [
 	{ path: 'edition', component: EditionComponent },
 	{ path: 'edition/:userId', component: EditionComponent }
 ];
-
 @NgModule({
 	imports: [
 		RouterModule.forRoot(routes)
