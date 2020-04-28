@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { EditionComponent } from './edition.component';
 
 export const routes: Routes = [
-	{ path: 'edition/display', component: EditionComponent },
-	{ path: 'edition/:userId', component: EditionComponent }
+	{ path: 'edition/display', component: EditionComponent, data: { num: 3 } },
+	{ path: 'edition/:userId', component: EditionComponent, data: { num: 4 } }
 ];
 @NgModule({
 	imports: [

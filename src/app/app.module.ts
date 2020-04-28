@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AngularMaterialModule } from './angular-material.module';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +25,7 @@ import { EditionModule } from './edition/edition.module';
 		HttpClientModule,
 		ListModule,
 		EditionModule,
+		BrowserAnimationsModule,
 		FormsModule
 	],
 	providers: [],

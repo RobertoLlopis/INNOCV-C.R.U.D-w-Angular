@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { ListComponent } from './list.component';
 
 export const routes: Routes = [
-	{ path: 'list/display', component: ListComponent }
+	{ path: 'list/display', component: ListComponent, data: { num: 2 } }
 ];
 @NgModule({
 	imports: [
