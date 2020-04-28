@@ -29,6 +29,7 @@ export class EditionListComponent implements OnInit, OnDestroy {
 			.getUsersUpdatedListener()
 			.subscribe((users: User[]) => {
 				this.users = users;
+				console.log(this.users);
 				toogleData(this.isLoading);
 			});
 	}

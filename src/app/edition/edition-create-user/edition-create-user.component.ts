@@ -22,16 +22,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 	]
 })
 export class CreateUserComponent implements OnInit, OnDestroy {
+	user: User;
+	users: User[] = [];
 	private userSub: Subscription;
 	@Input() displayParams: { editionMode: string; userId: number };
 	@Output() displayParamsChange = new EventEmitter<object>();
-	user: User;
-	users: User[] = [];
+
 	constructor(
 		public editionService: EditionService,
 		private router: Router,
 		private snackBar: MatSnackBar
 	) {}
+
 	ngOnInit() {
 		this.userSub = this.editionService
 			.getUsersUpdatedListener()
