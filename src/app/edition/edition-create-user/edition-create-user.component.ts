@@ -92,7 +92,7 @@ export class CreateUserComponent implements OnInit, OnDestroy {
 		snackBarRef.onAction().subscribe(() => {
 			console.log('Updated user aborted');
 			isUndo = true;
-			this.router.navigateByUrl('/edition');
+			this.router.navigateByUrl('/edition/display');
 		});
 		snackBarRef.afterDismissed().subscribe(() => {
 			if (!isUndo) {
@@ -104,7 +104,7 @@ export class CreateUserComponent implements OnInit, OnDestroy {
 	}
 	onCancel(form: NgForm) {
 		this.displayParamsChange.emit({ userId: null, editionMode: 'create' });
-		this.router.navigateByUrl('/edition');
+		this.router.navigateByUrl('/edition/display');
 		form.resetForm();
 	}
 	ngOnDestroy() {
