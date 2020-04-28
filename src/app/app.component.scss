@@ -1,0 +1,8 @@
+@import "./appHelpers/mediaQueriesHelper.scss";
+
+@mixin flexCenter($direction, $justiCont) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justiCont;
+  align-items: center;
+}

@@ -1,0 +1,24 @@
+<div class="edition-list-container" *ngIf="users.length > 0 && displayParams.editionMode !== 'edit' && !isLoading">
+  <h2 class="mat-title">These are the users registrated</h2>
+  <mat-accordion class="edition-list-accordion" multi="true">
+    <mat-expansion-panel *ngFor="let user of users">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ user.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p class="user-info-p"><span>Id: {{user.id}}</span> <span>-</span> <span>Birthdate:
+          {{user.birthdate.slice(0,10)}}</span></p>
+      <mat-action-row>
+        <a mat-flat-button color="accent" [routerLink]="['/edition',user.id]"
+          routerLinkActive="router-link-active">EDIT</a>
+        <button mat-flat-button color="warn" (click)="onDelete(user.id)">DELETE</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="loading-content" *ngIf="users.length <= 0 || isLoading">
+  <mat-spinner></mat-spinner>
+  <h2 class="text-info mat-body-1">Loading Users...</h2>
+</div>

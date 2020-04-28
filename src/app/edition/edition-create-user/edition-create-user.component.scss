@@ -1,0 +1,50 @@
+@import "../../app.component.scss";
+@import "../../appHelpers/mediaQueriesHelper.scss";
+
+.comp-container {
+	@include flexCenter(column, center);
+}
+.mat-card {
+	margin-top: 4rem;
+	width: 100%;
+	padding: 3rem;
+	list-style: none;
+	@media (max-width: 750px) {
+		width: 70%;
+	}
+}
+#birthdate {
+	text-align: right;
+}
+/* #birthdate::before {
+	content: "Birthday*";
+	font-size: 0.6rem;
+
+	top: -20;
+	right: 0;
+	position: absolute;
+} */
+.mat-form-field {
+	width: 100%;
+	padding: 0.25em;
+}
+.btn-container {
+	@include flexCenter(row, space-around);
+	width: 70%;
+	@include media(sm) {
+		width: 100%;
+	}
+}
+.mat-display-1 {
+	margin-bottom: 0;
+	padding-bottom: 1rem;
+}
+.input-container {
+	@include flexCenter(row, space-around);
+	width: 95%;
+	padding-bottom: 0.7rem;
+
+	@include media(sm) {
+		margin: 0.2rem auto;
+	}
+}

@@ -1,0 +1,22 @@
+<div class="comp-root" (window:resize)="onResize($event)" *ngIf="users.length > 0 && !isLoading">
+  <div class='tile-header-container'>
+    <mat-grid-tile-header>
+      <mat-card>These are the Users registered</mat-card>
+    </mat-grid-tile-header>
+  </div>
+  <div class="grid-content-block">
+    <mat-grid-list [cols]="breakpoints.columns" [rowHeight]="breakpoints.proportion +':'+1">
+      <mat-grid-tile *ngFor="let user of users">
+        <mat-card>
+          <mat-card-title class="tile-title">{{user.name}}</mat-card-title>
+          <mat-card-content>Id: {{user.id}} - Birthdate: {{user.birthdate}}</mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+<!-- 1200 para arriba 3 columnas y 7:1 / 885 para arriba 3 columnas y 4:1 / 677 para arriba 2 columnas y 4:1 / 593 1 7:1 / 419 1 5:1 /419> 1 4:1  -->
+<div class="loading-content" *ngIf="users.length <= 0 && isLoading">
+  <mat-spinner></mat-spinner>
+  <h2 class="text-info mat-body-1">Loading Users...</h2>
+</div>
