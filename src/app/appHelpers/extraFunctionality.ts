@@ -39,7 +39,6 @@ export function breakpointUnits(windowInnerWidth) {
 		breakpoints.proportion = 4;
 	}
 	else console.log(windowInnerWidth);
-	console.log(breakpoints);
 	return breakpoints;
 }
 /* -1 => * ,1=>2,1=>3,1=>4, 2=>3,  2=>4, 3=>4 */

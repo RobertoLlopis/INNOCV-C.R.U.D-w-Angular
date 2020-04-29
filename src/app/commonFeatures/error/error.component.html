@@ -1,9 +1,10 @@
-<div style="text-align: center; display: flex; justify-content: center; align-items: center;">
-  <h1 mat-dialog-title>An server error ocurred</h1>
+<div
+  style="text-align: center; display: flex;flex-direction: column; justify-content: center; align-items: center; padding:2rem">
+  <h1 mat-dialog-title translate="error.h1"></h1>
   <div mat-dialog-content>
-    <p class="mat-body-1">{{data.message}}</p>
+    <p class="mat-body-1" translate [translateParams]="{data : data.message}"></p>
   </div>
   <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>TRY AGAIN</button>
+    <button mat-button mat-dialog-close translate="error.btn"></button>
   </div>
 </div>

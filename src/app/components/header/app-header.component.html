@@ -1,8 +1,9 @@
 <mat-toolbar class="root">
-  <span><a [routerLink]="['/']" style="text-decoration: none">BASIC C.R.U.D.</a></span>
+  <span><a [routerLink]="['/']" style="text-decoration: none" translate="header.title"></a></span>
   <span class="links">
-    <a mat-flat-button color="primary" [routerLink]="['/list/display']" routerLinkActive="router-link-active">LIST</a>
-    <a mat-flat-button color="primary" [routerLink]="['/edition/display']"
-      routerLinkActive="router-link-active">EDITION</a>
+    <a mat-flat-button color="primary" [routerLink]="['/list/display']" routerLinkActive="router-link-active"
+      translate="header.list"></a>
+    <a mat-flat-button color="primary" [routerLink]="['/edition/display']" routerLinkActive="router-link-active"
+      translate="header.edition"></a>
   </span>
 </mat-toolbar>
