@@ -4,18 +4,26 @@ import { CommonModule } from '@angular/common';
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
 import { ListDisplayComponent } from './list-display/list-display.component';
+import { FormsModule } from '@angular/forms';
+import { UsersFilterPipeDisplay } from '../pipes/user.filter.pipe';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		AngularMaterialModule,
-		ListRoutingModule
+		ListRoutingModule,
+		FormsModule
 	],
-	exports: [],
+	exports: [
+		UsersFilterPipeDisplay
+	],
 	declarations: [
 		ListComponent,
-		ListDisplayComponent
+		ListDisplayComponent,
+		UsersFilterPipeDisplay
 	],
-	providers: []
+	providers: [
+		UsersFilterPipeDisplay
+	]
 })
 export class ListModule {}

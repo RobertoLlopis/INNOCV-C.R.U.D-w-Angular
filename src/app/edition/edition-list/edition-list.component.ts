@@ -22,6 +22,7 @@ export class EditionListComponent implements OnInit, OnDestroy {
 	private userSub: Subscription;
 	constructor(public editionService: EditionService) {}
 	users: User[] = [];
+	filterUsers = '';
 	ngOnInit() {
 		toogleData(this.isLoading);
 		this.editionService.getUsers();

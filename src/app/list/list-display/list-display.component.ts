@@ -20,6 +20,8 @@ export class ListDisplayComponent implements OnInit, OnDestroy {
 	users: User[] = [];
 	breakpoints: { columns: number; proportion: number };
 	isLoading: boolean = false;
+	filterUsers = '';
+
 	birthdateDisplayable(usersGotten) {
 		return usersGotten.map((u) => {
 			u.birthdate = u.birthdate.slice(0, 10);

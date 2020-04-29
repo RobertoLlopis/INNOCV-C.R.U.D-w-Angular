@@ -3,6 +3,8 @@ import { AngularMaterialModule } from '../angular-material.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EditionRoutingModule } from './edition-routing.module';
+import { UsersFilterPipeEdition } from '../pipes/user.filter.pipe';
+
 import { EditionComponent } from './edition.component';
 import { EditionListComponent } from './edition-list/edition-list.component';
 import { CreateUserComponent } from './edition-create-user/edition-create-user.component';
@@ -14,12 +16,17 @@ import { CreateUserComponent } from './edition-create-user/edition-create-user.c
 		EditionRoutingModule,
 		FormsModule
 	],
-	exports: [],
+	exports: [
+		UsersFilterPipeEdition
+	],
 	declarations: [
 		EditionComponent,
 		EditionListComponent,
-		CreateUserComponent
+		CreateUserComponent,
+		UsersFilterPipeEdition
 	],
-	providers: []
+	providers: [
+		UsersFilterPipeEdition
+	]
 })
 export class EditionModule {}

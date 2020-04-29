@@ -3,10 +3,12 @@
     <mat-grid-tile-header>
       <mat-card>These are the Users registered</mat-card>
     </mat-grid-tile-header>
+    <input type="text" class="filter-pipe" placeholder="Search..." name="filterUsers" [(ngModel)]="filterUsers" />
   </div>
+
   <div class="grid-content-block">
     <mat-grid-list [cols]="breakpoints.columns" [rowHeight]="breakpoints.proportion +':'+1">
-      <mat-grid-tile *ngFor="let user of users">
+      <mat-grid-tile *ngFor="let user of users | usersFilterPipeDisplay: filterUsers">
         <mat-card>
           <mat-card-title class="tile-title">{{user.name}}</mat-card-title>
           <mat-card-content>Id: {{user.id}} - Birthdate: {{user.birthdate}}</mat-card-content>

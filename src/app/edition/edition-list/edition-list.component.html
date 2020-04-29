@@ -1,7 +1,8 @@
 <div class="edition-list-container" *ngIf="users.length > 0 && displayParams.editionMode !== 'edit' && !isLoading">
   <h2 class="mat-title">These are the users registrated</h2>
+  <input type="text" class="filter-pipe" placeholder="Search..." name="filterUsers" [(ngModel)]="filterUsers" />
   <mat-accordion class="edition-list-accordion" multi="true">
-    <mat-expansion-panel *ngFor="let user of users">
+    <mat-expansion-panel *ngFor="let user of users | usersFilterPipeEdition: filterUsers">
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{ user.name}}

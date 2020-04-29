@@ -29,6 +29,7 @@ import { EditionModule } from './edition/edition.module';
 		FormsModule
 	],
 	providers: [],
+	exports: [],
 	bootstrap: [
 		AppComponent
 	]

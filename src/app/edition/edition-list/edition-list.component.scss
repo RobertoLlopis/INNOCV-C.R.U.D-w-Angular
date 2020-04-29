@@ -1,7 +1,7 @@
 @import "../../app.component.scss";
 
 .edition-list-container {
-	margin-top: 2rem;
+	margin-top: 3.5rem;
 	@include flexCenter(column, center);
 }
 .edition-list-accordion {
@@ -26,4 +26,16 @@
 	@include flexCenter(row, space-evenly);
 	width: 100%;
 	padding-top: 1rem;
+}
+.filter-pipe {
+	padding: 10px 20px;
+
+	border: none;
+	outline: none;
+	font-size: 20px;
+	border-radius: 25px;
+	width: 60vw;
+	max-width: 600px;
+	/* margin-top: 2rem; */
+	margin-bottom: 1.5rem;
 }
