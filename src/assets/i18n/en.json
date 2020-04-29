@@ -1,0 +1,47 @@
+{
+  "header": {
+    "title": "BASIC C.R.U.D.",
+    "list": "LIST",
+    "edition": "EDITION",
+    "about": "ABOUT"
+  },
+  "welcome": {
+    "h2": "Thank you for the opportunity",
+    "h4": "Would you like to add a new user?",
+    "btnYes": "YES",
+    "btnNo": "NO"
+  },
+  "list-display": {
+    "grid-title": "These are the Users registered",
+    "search": "Search...",
+    "card-title": "{{name}}",
+    "card-content": "Id: {{id}} - Birthdate: {{birthdate}}",
+    "spinning": "Loading Users..."
+  },
+  "edition-list": {
+    "title": "These are the Users registered",
+    "search": "Search...",
+    "panel-title": "{{name}}",
+    "panel-id": "Id: {{id}}",
+    "panel-birthdate": "Birthdate: {{birthdate}}",
+    "edit": "EDIT",
+    "delete": "DELETE",
+    "spinning": "Loading Users..."
+  },
+  "create-user": {
+    "h3": "Create a new user",
+    "input-name": "Enter your name",
+    "input-birthdate": "Enter your birthdate",
+    "form-name": "Please introduce a name",
+    "form-birthdate": "Please introduce a birth date",
+    "save": "Save User",
+    "edit": "Edit User",
+    "cancel": "Cancel",
+    "h3-editing": "Editing {{name}}"
+  },
+  "error": {
+    "h1": "An server error ocurred",
+    "p": "{{data}}",
+    "btn": "TRY AGAIN"
+  }
+}

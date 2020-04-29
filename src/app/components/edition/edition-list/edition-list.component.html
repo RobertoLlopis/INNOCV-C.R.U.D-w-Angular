@@ -1,19 +1,21 @@
 <div class="edition-list-container" *ngIf="users.length > 0 && displayParams.editionMode !== 'edit' && !isLoading">
-  <h2 class="mat-title">These are the users registrated</h2>
-  <input type="text" class="filter-pipe" placeholder="Search..." name="filterUsers" [(ngModel)]="filterUsers" />
+  <h2 class="mat-title" translate="edition-list.title"></h2>
+  <input type="text" class="filter-pipe" [placeholder]="'edition-list.search' | translate" name="filterUsers"
+    [(ngModel)]="filterUsers" />
   <mat-accordion class="edition-list-accordion" multi="true">
     <mat-expansion-panel *ngFor="let user of users | usersFilterPipeEdition: filterUsers">
       <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ user.name}}
+        <mat-panel-title translate [translateParams]="{ name: user.name }">
+          edition-list.panel-title
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <p class="user-info-p"><span>Id: {{user.id}}</span> <span>-</span> <span>Birthdate:
-          {{user.birthdate.slice(0,10)}}</span></p>
+      <p class="user-info-p"><span translate [translateParams]="{ id: user.id}">edition-list.panel-id</span>
+        <span>-</span> <span translate
+          [translateParams]="{birthdate: user.birthdate.slice(0,10) }">edition-list.panel-birthdate</span></p>
       <mat-action-row>
-        <a mat-flat-button color="accent" [routerLink]="['/edition',user.id]"
-          routerLinkActive="router-link-active">EDIT</a>
-        <button mat-flat-button color="warn" (click)="onDelete(user.id)">DELETE</button>
+        <a mat-flat-button color="accent" [routerLink]="['/edition',user.id]" routerLinkActive="router-link-active"
+          translate="edition-list.edit"></a>
+        <button mat-flat-button color="warn" (click)="onDelete(user.id)" translate="edition-list.delete"></button>
       </mat-action-row>
     </mat-expansion-panel>
   </mat-accordion>
@@ -21,5 +23,5 @@
 
 <div class="loading-content" *ngIf="users.length <= 0 || isLoading">
   <mat-spinner></mat-spinner>
-  <h2 class="text-info mat-body-1">Loading Users...</h2>
+  <h2 class="text-info mat-body-1" translate="edition-list.spinning"></h2>
 </div>

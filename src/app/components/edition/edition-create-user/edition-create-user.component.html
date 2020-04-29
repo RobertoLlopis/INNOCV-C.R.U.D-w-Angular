@@ -1,40 +1,41 @@
 <mat-card *ngIf="displayParams.editionMode === 'create'">
   <form class="comp-container" (submit)="handleNewUser(userForm)" #userForm="ngForm">
-    <h3 class="mat-display-1">Create a new user</h3>
+    <h3 class="mat-display-1" translate="create-user.h3"></h3>
     <div class="input-container">
       <mat-form-field>
-        <input type="text" matInput name="name" ngModel required placeholder="Enter your name" minlength="3"
-          #name="ngModel">
-        <mat-error *ngIf="name.invalid">Please introduce a name</mat-error>
+        <input type="text" matInput name="name" ngModel required [placeholder]="'create-user.input-name' | translate"
+          minlength="3" #name="ngModel">
+        <mat-error *ngIf="name.invalid" translate="create-user.form-name"></mat-error>
       </mat-form-field>
       <mat-form-field id="birthdate">
-        <input matInput id="birthdate" type="date" autocomplete placeholder="Enter your birthday" name="birthdate"
-          ngModel required #birthdate="ngModel">
-        <mat-error *ngIf="birthdate.invalid">Please introduce a birth date</mat-error>
+        <input matInput id="birthdate" type="date" autocomplete
+          [placeholder]="'create-user.input-birthdate' | translate" name="birthdate" ngModel required
+          #birthdate="ngModel">
+        <mat-error *ngIf="birthdate.invalid" translate="create-user.form-birthdate"></mat-error>
       </mat-form-field>
     </div>
-    <button mat-raised-button color="primary" type="submit">Save User</button>
+    <button mat-raised-button color="primary" type="submit" translate="create-user.save"></button>
   </form>
 </mat-card>
 
 <mat-card *ngIf="displayParams.editionMode === 'edit'">
   <form class="comp-container" (submit)="handleEditUser(editUserForm)" #editUserForm="ngForm">
-    <h3 class="mat-display-1">Editing {{user.name}}</h3>
+    <h3 class="mat-display-1" translate [translateParams]="{ name: user.name}">create-user.h3-editing</h3>
     <div class="input-container">
       <mat-form-field id="name">
         <input type="text" matInput name="name" [ngModel]="user.name" required value={{user.name}} minlength="3"
           #name="ngModel">
-        <mat-error *ngIf="name.invalid">Please introduce a name</mat-error>
+        <mat-error *ngIf="name.invalid" translate="create-user.form-name"></mat-error>
       </mat-form-field>
       <mat-form-field id="birthdate">
-        <input matInput id="birthdate" type="date" autocomplete [value]="user.birthdate" name="birthdate"
+        <input matInput id="birthdate" type="date" autocomplete value={{user.birthdate}} name="birthdate"
           [ngModel]="user.birthdate" required #birthdate="ngModel">
-        <mat-error *ngIf="birthdate.invalid">Please introduce a birth date</mat-error>
+        <mat-error *ngIf="birthdate.invalid" translate="create-user.form-birthdate"></mat-error>
       </mat-form-field>
     </div>
     <div class="btn-container">
-      <button mat-raised-button color="primary" type="submit">Edit User</button>
-      <button mat-raised-button color="warn" (click)="onCancel(editUserForm)">Cancel</button>
+      <button mat-raised-button color="primary" type="submit" tranlate="create-user.edit"></button>
+      <button mat-raised-button color="warn" (click)="onCancel(editUserForm)" translate="create-user.cancel"></button>
     </div>
   </form>
 </mat-card>
