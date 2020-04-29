@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { WelcomeComponent } from './welcome/welcome.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
 	{ path: '', component: WelcomeComponent, data: { num: 1 } },
-	{ path: 'list', loadChildren: './list/list.module#ListModule' },
-	{ path: 'edition', loadChildren: './edition/edition.module#EditionModule' }
+	{ path: 'list', loadChildren: './components/list/list.module#ListModule' },
+	{
+		path: 'edition',
+		loadChildren: './components/edition/edition.module#EditionModule'
+	}
 ];
 @NgModule({
 	imports: [

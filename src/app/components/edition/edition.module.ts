@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { AngularMaterialModule } from '../angular-material.module';
+import { AngularMaterialModule } from '../../commonFeatures/angular-material.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EditionRoutingModule } from './edition-routing.module';
-import { UsersFilterPipeEdition } from '../pipes/user.filter.pipe';
+import { UsersFilterPipeEdition } from '../../commonFeatures/pipes/user.filter.pipe';
 
 import { EditionComponent } from './edition.component';
 import { EditionListComponent } from './edition-list/edition-list.component';

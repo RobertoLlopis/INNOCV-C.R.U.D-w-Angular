@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import {
 	breakpointUnits,
 	toogleData
-} from '../../appHelpers/extraFunctionality';
+} from '../../../appHelpers/extraFunctionality';
 
 @Component({
 	selector: 'list-display',

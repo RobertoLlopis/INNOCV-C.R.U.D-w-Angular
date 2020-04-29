@@ -6,6 +6,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NgModule } from '@angular/core';
 		MatExpansionModule,
 		MatGridListModule,
 		MatProgressSpinnerModule,
-		MatSnackBarModule
+		MatSnackBarModule,
+		MatDialogModule
 	]
 })
 export class AngularMaterialModule {}

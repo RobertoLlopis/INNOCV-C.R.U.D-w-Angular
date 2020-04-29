@@ -8,7 +8,7 @@ import {
 import { User } from '../edition-create-user/userModel';
 import { EditionService } from '../edition.service';
 import { Subscription } from 'rxjs';
-import { toogleData } from '../../appHelpers/extraFunctionality';
+import { toogleData } from '../../../appHelpers/extraFunctionality';
 @Component({
 	selector: 'edition-list',
 	templateUrl: './edition-list.component.html',

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { User } from '../edition/edition-create-user/userModel';
+import { User } from '../../components/edition/edition-create-user/userModel';
 
 @Pipe({
 	name: 'usersFilterPipeEdition'
@@ -26,8 +26,6 @@ export class UsersFilterPipeEdition implements PipeTransform {
 			return usersResult;
 		}
 		return usersResult;
-		/* let usersResult: User[];
-    users.map(u => u) */
 	}
 }
 @Pipe({
