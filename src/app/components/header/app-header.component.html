@@ -1,9 +1,33 @@
-<mat-toolbar class="root">
+<mat-toolbar class="root" (window:resize)="onResize($event)" *ngIf="windowWidth > 600">
   <span><a [routerLink]="['/']" style="text-decoration: none" translate="header.title"></a></span>
   <span class="links">
     <a mat-flat-button color="primary" [routerLink]="['/list/display']" routerLinkActive="router-link-active"
       translate="header.list"></a>
     <a mat-flat-button color="primary" [routerLink]="['/edition/display']" routerLinkActive="router-link-active"
       translate="header.edition"></a>
+    <span class="languageContainer">
+      <a mat-flat-button [class]="activeEnglish ? 'activeLink': 'nonActive'" (click)="handleTranslation('en')">EN</a>
+      <a mat-flat-button [class]="activeSpanish ? 'activeLink': 'nonActive'" (click)="handleTranslation('es')">ES</a>
+    </span>
   </span>
+</mat-toolbar>
+
+<mat-toolbar class="root" (window:resize)="onResize($event)" *ngIf="windowWidth <= 600">
+  <span><a [routerLink]="['/']" style="text-decoration: none" translate="header.title"></a></span>
+  <div class="links">
+    <span class="languageContainer">
+      <a mat-flat-button [class]="activeEnglish ? 'activeLink': 'nonActive'" (click)="handleTranslation('en')">EN</a>
+      <a mat-flat-button [class]="activeSpanish ? 'activeLink': 'nonActive'" (click)="handleTranslation('es')">ES</a>
+    </span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item color="primary" [routerLink]="['/list/display']" routerLinkActive="router-link-active"
+        translate="header.list"></button>
+      <button mat-menu-item color="primary" [routerLink]="['/edition/display']" routerLinkActive="router-link-active"
+        translate="header.edition"></button>
+    </mat-menu>
+
+  </div>
 </mat-toolbar>

@@ -7,6 +7,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -19,7 +21,9 @@ import { NgModule } from '@angular/core';
 		MatGridListModule,
 		MatProgressSpinnerModule,
 		MatSnackBarModule,
-		MatDialogModule
+		MatDialogModule,
+		MatMenuModule,
+		MatIconModule
 	]
 })
 export class AngularMaterialModule {}
